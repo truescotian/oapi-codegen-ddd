@@ -22,6 +22,7 @@ func NewDatabasePool(ctx context.Context, maxConns int) (*pgxpool.Pool, error) {
 		maxConns,
 		2,
 	)
+
 	config, err := pgxpool.ParseConfig(url)
 	if err != nil {
 		return nil, err
